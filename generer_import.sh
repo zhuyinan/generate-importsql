@@ -1,4 +1,6 @@
+#Create file of import.sql
 touch import.sql;
+#A circle to handle all files
 ls * | while read file;
 do 
 mv $file ${$file%.*};
