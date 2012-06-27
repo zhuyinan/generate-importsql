@@ -1,0 +1,22 @@
+//Doc pour import les base de donné à serveur de dev
+
+* Prendre les fichier backup depuis serveur dev  /home/devspace/backup/Mysql
+
+* Choisir un paquet de backup.
+
+* fait "tar xvf xxx.tgz" pour extract.
+
+* accéder à le répertoire de extract, fait "gunzip *.gz" pour extrat tous les base de donneé .gz à .sql
+
+
+* utilise ce bash pour retirer tous le date .xx-xx-xxxx après chaque fichier
+- while read file; do mv $file ${$file%.*};
+
+* en utilisant le bash "generer_import.sh" on peut générér un fichier de import pour importer tous les chose
+- ./generer_import.sh
+
+* Utilisant le cmd pour connecter à mysql de dev
+- mysql -h 127.0.0.1 -P 3307 -u root -p
+- mysql> source import.sql
+
+
