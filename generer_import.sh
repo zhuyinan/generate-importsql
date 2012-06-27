@@ -1,3 +1,4 @@
+#!/bin/sh
 #Create file of import.sql
 touch import.sql;
 #A circle to handle all files
